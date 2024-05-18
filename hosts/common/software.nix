@@ -17,6 +17,7 @@
     fastfetch
     zellij
     gtop
+    lazygit
 
     # for steam
     mangohud
@@ -27,6 +28,11 @@
     # default desktop apps
     firefox
     mupdf
+
+    # nix dev helpers
+    nh
+    nil
+    alejandra
   ];
 
   programs.neovim = {

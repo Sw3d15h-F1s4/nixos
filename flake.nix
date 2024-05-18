@@ -27,10 +27,10 @@
     
   in {
     nixosConfigurations = {
-      sam-desktop = nixpkgs.lib.nixosSystem {
+      desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-	  ./hosts/sam-desktop.nix
+	  ./hosts/desktop.nix
 
       	  { # I'm still a loser.
        	    imports = [ aagl.nixosModules.default ];
@@ -43,7 +43,7 @@
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
 
-	    home-manager.users.samjt = import ./users/samjt.nix;
+	    home-manager.users.sam = import ./users/sam.nix;
 	  }
         ];
       };
@@ -56,7 +56,7 @@
 #	  home-manager.nixosModules.home-manager {
 #	    home-manager.useGlobalPkgs = true;
 #	    home-manager.useUserPackages = true;
-#	    home-manager.users.samjt = import ./users/samjt.nix;
+#	    home-manager.users.sam = import ./users/sam.nix;
 #	  }
 #	];
 #      };

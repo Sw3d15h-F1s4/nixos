@@ -2,7 +2,7 @@
 
 {
 
-  users.users.samjt = {
+  users.users.sam = {
     isNormalUser = true;
     description = "Sam T";
     extraGroups = ["networkmanager" "wheel"];

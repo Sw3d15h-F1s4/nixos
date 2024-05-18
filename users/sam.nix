@@ -2,11 +2,11 @@
 
 {
   imports = [
-#    ./configs/samjt
+#    ./configs/sam
   ];
 
-  home.username = "samjt";
-  home.homeDirectory = "/home/samjt";
+  home.username = "sam";
+  home.homeDirectory = "/home/sam";
 
   home.packages = with pkgs; [
     vscode

@@ -7,7 +7,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  networking.hostName = "sam-desktop";
+  networking.hostName = "desktop";
 
   services.xserver.videoDrivers = [ "amdgpu" ];
 
