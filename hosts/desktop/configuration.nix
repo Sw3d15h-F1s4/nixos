@@ -1,5 +1,5 @@
 # For settings specific to desktop
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   imports = [
@@ -37,6 +37,12 @@
     scrcpy
   ];
 
+  home-manager.users = builtins.mapAttrs (name: user: {...}: {
+    imports = [
+      ./home.nix
+    ];
+  })
+  (config.myNixOS.home-users);
 
   system.stateVersion = "23.11";
 }

@@ -11,4 +11,11 @@
 
     font = "FiraCode Nerd Font";
   };
+
+  wayland.windowManager.hyprland.settings = {
+      layerrule = [
+        "blur, notifications"
+        "ignorezero, notifications"
+      ];
+  };
 }

@@ -10,7 +10,7 @@
 
     # Stable packages, mainly to avoid rebuilds on big packages that don't need updates.
     nixpkgs-stable = {
-      url = "nixpkgs/nixos-24.05";
+      url = "nixpkgs/nixos-24.11";
     };
 
     # Home manager version. Stick to main branch to follow unstable nixpkgs.
@@ -55,7 +55,8 @@
     };
 
     homeConfigurations = {
-      sam = mkHome ./users/sam/home.nix;
+      "sam@desktop" = mkHome ./users/sam/home.nix ./hosts/desktop/home.nix;
+      "sam@laptop"  = mkHome ./users/sam/home.nix ./hosts/laptop/home.nix;
     };
 
     homeManagerModules.default = ./modules/home-manager;

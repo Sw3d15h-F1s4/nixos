@@ -24,7 +24,7 @@ in rec {
     };
 
   # Create a home-manager configuration
-  mkHome = config:
+  mkHome = config: hostconfig:
     inputs.home-manager.lib.homeManagerConfiguration {
       pkgs = pkgsFor system;
       extraSpecialArgs = {
@@ -33,6 +33,7 @@ in rec {
       modules = [
         config
         outputs.homeManagerModules.default
+        hostconfig
       ];
     };
 

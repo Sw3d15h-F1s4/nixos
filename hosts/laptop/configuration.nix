@@ -1,5 +1,5 @@
 # Settings specific to my latpop
-{ ... }:
+{ config, ... }:
 
 {
   imports = [
@@ -39,4 +39,11 @@
       enableOffloadCmd = true;
     };
   };
+
+  home-manager.users = builtins.mapAttrs (name: user: {...}: {
+    imports = [
+      ./home.nix
+    ];
+  })
+  (config.myNixOS.home-users);
 }

@@ -1,5 +1,18 @@
-{ ... }:
+{ config, lib, ... }:
+let
+  cfg = config.myHomeManager.hyprlock;
+in
 {
+  options.myHomeManager.hyprlock = {
+    default-monitor = lib.mkOption {
+      type = lib.types.str;
+      default = "";
+      description = ''
+        What monitor Hyprlock should consider primary
+      '';
+    };
+
+  };
   programs.hyprlock = {
     enable = true;
     package = null;
@@ -15,7 +28,7 @@
       };
 
       input-field = {
-        monitor = "";
+        monitor = cfg.default-monitor;
         size = "250, 60";
         outline_thickness = 2;
         dots_size = 0.2;
@@ -37,7 +50,7 @@
 
       label = [
         {
-          monitor = "";
+          monitor = cfg.default-monitor;
           text = "cmd[update:1000] echo \"\$(date +\"%A, %B %d\")\"";
           color = "rgba(211, 198, 170, 0.75)";
           font_size = 22;
@@ -46,7 +59,7 @@
           valign = "center";
         }
         {
-          monitor = "";
+          monitor = cfg.default-monitor;
           text = "cmd[update:1000] echo \"\$(date +\"%-I:%M\")\"";
           color = "rgba(211, 198, 170, 0.75)";
           font_size = 95;
@@ -55,7 +68,7 @@
           valign = "center";
         }
         {
-          monitor = "";
+          monitor = cfg.default-monitor;
           text = "cmd[update:1000] echo \"\$(whoami)\"";
           color = "rgba(211, 198, 170, 0.75)";
           font_size = 14;
@@ -67,8 +80,8 @@
 
       image = [
         {
-          monitor = "";
-          path = "${../../../../users/sam/profile.png}";
+          monitor = cfg.default-monitor;
+          path = "${../../../users/sam/profile.png}";
           size = 75;
           border_size = 2;
           border_color = "rgb(77, 89, 96)";
@@ -79,5 +92,11 @@
         }
       ];
     };
+  };
+
+  wayland.windowManager.hyprland.settings = {
+    bind = [
+      "$mod, m, exec, hyprlock"
+    ];
   };
 }

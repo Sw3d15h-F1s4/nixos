@@ -34,6 +34,11 @@ in
         action = "systemctl reboot";
         keybind = "r";
       }
+      {
+        label = "sleep";
+        action = "systemctl sleep";
+        keybind = "x";
+      }
     ];
 
 
@@ -92,5 +97,11 @@ in
          background-image: image(url("${wlogout-icons}/reboot.png"), url("${wlogout-icons}/reboot.png"));
       }
     '';
+  };
+
+  wayland.windowManager.hyprland.settings = {
+    bind = [
+      "$mod SHIFT, M, exec, wlogout -b 1 -r 40"
+    ];
   };
 }

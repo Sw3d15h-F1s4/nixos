@@ -10,16 +10,14 @@
       "$mod" = "SUPER";
       "$terminal" = "uwsm app -- alacritty";
       "$fileManager" = "uwsm app -- nautilus";
-      "$menu" = "uwsm app -- $(wofi --show=drun --define=drun-print_desktop_file=true)";
 
       exec-once = [
         "uwsm app -- udiskie"
-        "uwsm app -- hyprswitch init --custom-css ~/.config/hyprswitch/style.css"
       ];
 
       monitor = [
-        "desc:Dell Inc. S2719DGF FRG05V2, 2560x1440@144, auto, 1, vrr, 2"
-        "desc:Dell Inc. DELL S2721DS 1N3YTY3, 2560x1440@75, auto, 1"
+        # "desc:Dell Inc. S2719DGF FRG05V2, 2560x1440@144, auto, 1, vrr, 2"
+        # "desc:Dell Inc. DELL S2721DS 1N3YTY3, 2560x1440@75, auto, 1"
       ];
 
       general = {
@@ -55,13 +53,10 @@
 
       bind = [
         "$mod, Q, exec, $terminal"
-        "$mod, R, exec, $menu"
         "$mod, E, exec, $fileManager"
         "$mod, C, killactive"
-        "$mod SHIFT, M, exec, wlogout -b 1 -r 40"
         "$mod, V, togglefloating"
         "$mod, F, fullscreen"
-        "$mod, m, exec, hyprlock"
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
@@ -77,10 +72,6 @@
         "$mod, mouse_up, workspace, e-1"
 
         "$mod SHIFT, s, exec, hyprshot -m region -o ~/Pictures/Screenshots"
-
-        "alt, tab, exec, hyprswitch gui --mod-key alt --key tab --close mod-key-release --reverse-key=mod=shift"
-        "alt SHIFT, tab, exec, hyprswitch gui --mod-key alt --key tab --close mod-key-release --reverse-key=mod=shift"
-
       ] ++ (
         builtins.concatLists (builtins.genList (i:
           let ws = 1 + i;
@@ -101,15 +92,6 @@
           name = "wireless-controller-touchpad";
           enabled = 0;
         }
-      ];
-
-      layerrule = [
-        "blur, wofi"
-        "ignorezero, wofi"
-        "blur, notifications"
-        "ignorezero, notifications"
-        "ignorezero, hyprswitch"
-        "blur, hyprswitch"
       ];
 
       misc = {
