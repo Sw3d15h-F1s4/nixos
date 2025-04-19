@@ -35,7 +35,7 @@ in
         keybind = "r";
       }
       {
-        label = "sleep";
+        label = "suspend";
         action = "systemctl sleep";
         keybind = "x";
       }
