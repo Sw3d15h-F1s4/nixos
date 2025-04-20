@@ -1,4 +1,4 @@
-{ outputs, lib, hostname, ... }:
+{ outputs, lib, ... }:
 {
   imports = [outputs.homeManagerModules.default];
 
@@ -13,6 +13,7 @@
 
     alacritty.enable = true;
     nixvim.enable = true;
+    neovide.enable = true;
     fastfetch.enable = true;
     zellij.enable = true;
   };
