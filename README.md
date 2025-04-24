@@ -31,6 +31,7 @@ More rambling can be found in `./docs`. This contains the ramblings of a beginne
  - Vimjoyer (pretty much lifted the library functions from here)
  - EmergentMind
  - Wil Taylor
+ - [fentas/nixos](https://github.com/fentas/nixos) very cool love to see it :)
 
 
 Suggestions are always welcome! Feel free to open an issue to ask questions too, but beware I am a linux noob.
