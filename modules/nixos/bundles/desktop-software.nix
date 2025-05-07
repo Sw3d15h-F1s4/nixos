@@ -14,6 +14,8 @@
     thunderbird-latest
 
     qalculate-gtk
+
+    bitwarden-desktop
   ];
 
 
