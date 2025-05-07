@@ -19,12 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Imports a flake for the anime games.
-    aagl = {
-     url = "github:ezKEa/aagl-gtk-on-nix";
-     inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Manages neovim through home-manager modules
     nixvim = {
       url = "github:nix-community/nixvim";
