@@ -16,6 +16,7 @@
     neovide.enable = true;
     fastfetch.enable = true;
     zellij.enable = true;
+    qalculate.enable = true;
   };
 
 
