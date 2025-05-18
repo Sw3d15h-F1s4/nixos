@@ -27,7 +27,7 @@
     hyprpicker
 
     # Media
-    celluloid
+    clapper
 
     # Image viewer
     image-roll

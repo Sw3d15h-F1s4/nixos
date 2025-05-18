@@ -67,7 +67,7 @@ candidates:
  - VLC (its a classic)
  - celluloid: a nicer front end for mpv
 
-Selected: celluloid
+Selected: celluloid *EDIT* bruh celluloid doesnt work it inverts the video and puts a black screen over it, weirdly mpv works fine. moved to clapper
 
 ## Image viewer
 I literally use this twice. but like. when you need it you need it. i'd also like the ability to make quick edits (say like circling something on the screenshot i just took)
@@ -107,7 +107,7 @@ ill try rnote again
 ## bluetooth
 cant believe i hadnt thought of this
 
-Overskride
+Overskride - nevermind this one doesn't work stick to blueman
 
 ## Wifi settings
 nm-applet
