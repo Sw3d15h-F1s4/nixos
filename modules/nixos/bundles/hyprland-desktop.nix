@@ -43,6 +43,7 @@
 
     pwvucontrol
     helvum
+    luminance
   ];
 
 }
