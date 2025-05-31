@@ -25,9 +25,19 @@ let
       configExtension = config: (lib.mkIf cfg.bundles.${name}.enable config);
     })
     (mylib.filesIn ./bundles);
-  
+
+  colors = 
+    mylib.extendModules
+    (name: {
+      extraOptions = {
+        myHomeManager.colors.${name}.enable = lib.mkEnableOption "enable the ${name} colorscheme module";
+      };
+
+      configExtension = config: (lib.mkIf cfg.colors.${name}.enable config);
+    })
+    (mylib.filesIn ./colors);
 
 in {
   imports = [
-  ] ++ features ++ bundles;
+  ] ++ features ++ bundles ++ colors;
 }

@@ -17,6 +17,8 @@
     fastfetch.enable = true;
     zellij.enable = true;
     qalculate.enable = true;
+
+    colors.everforest.enable = true;
   };
 
 

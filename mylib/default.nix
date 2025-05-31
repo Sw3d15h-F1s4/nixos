@@ -98,4 +98,6 @@ in rec {
   #   ]
   #   (system: pkgs inputs.nixpkgs.legacyPackages.${system});
 
+  colors = import ./colors.nix {inherit inputs;};
+
 }
