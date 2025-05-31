@@ -32,6 +32,7 @@ More rambling can be found in `./docs`. This contains the ramblings of a beginne
  - EmergentMind
  - Wil Taylor
  - [fentas/nixos](https://github.com/fentas/nixos) very cool love to see it :)
+ - Misterio77 for lots of neat nix functions and techniques. very cool.
 
 
 Suggestions are always welcome! Feel free to open an issue to ask questions too, but beware I am a linux noob.
