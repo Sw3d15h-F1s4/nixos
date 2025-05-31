@@ -1,4 +1,8 @@
-{ ... }:
+{ mylib, config, ... }:
+let
+  clib = mylib.colors;
+  colors = config.myHomeManager.colors;
+in
 {
   wayland.windowManager.hyprland= {
     enable = true;
@@ -25,8 +29,8 @@
         gaps_out = 20;
 
         resize_on_border = true;
-        "col.active_border" = "0xFFA7C080";
-        "col.inactive_border" = "0xFF4854E";
+        "col.active_border" = "rgba(${colors.green}ff)";
+        "col.inactive_border" = "rgba(${colors.bg_green}ff)";
       };
 
       decoration = {
@@ -96,7 +100,7 @@
 
       misc = {
         disable_hyprland_logo = true;
-        background_color = "rgb(41, 49, 54)";
+        background_color = "rgb(${colors.bg_dim})";
       };
     };
   };

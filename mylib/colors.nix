@@ -88,10 +88,10 @@ in rec {
   hex = string: "#" + toString string;
 
   #add an alpha value (either before or after)
-  rgba = string: alpha: string + toString alpha;
-  argb = string: alpha: toString alpha + string;
+  rgba = string: alpha: hex (string + toString alpha);
+  argb = string: alpha: hex (toString alpha + string);
   
   #convert RGB hex color code
-  hex2css = hex: "rgb(" + (builtins.concatStringsSep "," (map toString (hexToRGB hex))) + ")";
-  hex2cssa = hex: "rgba(" + (builtins.concatStringsSep "," (map toString (hexToRGBA hex))) + ")";
+  hex2css = hex: "rgb(" + (builtins.concatStringsSep ", " (map toString (hexToRGB hex))) + ")";
+  hex2cssa = hex: "rgba(" + (builtins.concatStringsSep ", " (map toString (hexToRGBA hex))) + ")";
 }

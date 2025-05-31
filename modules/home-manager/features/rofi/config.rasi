@@ -1,0 +1,7 @@
+configuration {
+  modes: "drun,run,filebrowser,window";
+  show-icons: true;
+
+}
+
+@theme "launcher/style"

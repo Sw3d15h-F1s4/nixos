@@ -7,8 +7,7 @@
     hyprpaper.enable = true;
     gtk-themes.enable = true;
     mako.enable = true;
-    wlogout.enable = true;
-    wofi.enable = true;
+    rofi.enable = true;
     waybar.enable = true;
     hyprswitch.enable = true;
   };

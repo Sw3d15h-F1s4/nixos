@@ -19,16 +19,16 @@
     };
   };
 
-  wayland.windowManager.hyprland = {
-    settings = {
-      "$menu" = "uwsm app -- $(wofi --show=drun --define=drun-print_desktop_file=true)";
-      bind = [
-        "$mod, R, exec, $menu"
-      ];
-      layerrule = [
-        "blur, wofi"
-        "ignorezero, wofi"
-      ];
-    };
-  };
+  # wayland.windowManager.hyprland = {
+  #   settings = {
+  #     "$menu" = "uwsm app -- $(wofi --show=drun --define=drun-print_desktop_file=true)";
+  #     bind = [
+  #       "$mod, R, exec, $menu"
+  #     ];
+  #     layerrule = [
+  #       "blur, wofi"
+  #       "ignorezero, wofi"
+  #     ];
+  #   };
+  # };
 }

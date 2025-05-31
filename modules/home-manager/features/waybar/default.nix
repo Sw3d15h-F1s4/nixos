@@ -1,9 +1,26 @@
-{ ... }:
+{ mylib, config, ... }:
+let
+  clib = mylib.colors;
+  colors = config.myHomeManager.colors;
+in
 {
   programs.waybar = {
     enable = true;
 
-    style = ./style.css;
+    style = ''
+      @define-color background #${colors.bg0};
+      @define-color background-light #${colors.bg1};
+      @define-color foreground #${colors.text};
+      @define-color black #${colors.bg_dim};
+      @define-color red #${colors.red};
+      @define-color green #${colors.green};
+      @define-color yellow #${colors.yellow};
+      @define-color blue #${colors.blue};
+      @define-color magenta #${colors.purple};
+      @define-color cyan #${colors.cyan};
+      @define-color white #${colors.text};
+      @define-color orange #${colors.orange};
+      '' + builtins.readFile ./style.css;
 
     settings = {
       mainBar = {
