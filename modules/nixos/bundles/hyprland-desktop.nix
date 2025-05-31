@@ -44,6 +44,8 @@
     pwvucontrol
     helvum
     luminance
+
+    resources
   ];
 
 }
