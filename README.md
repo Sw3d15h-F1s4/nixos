@@ -8,7 +8,7 @@ I might forget to update this.
 
  - WM: Hyprland
  - Bar: Waybar
- - Launcher: Wofi
+ - Launcher: Rofi (Wayland)
  - Greeter: SDDM
  - Terminal: Alacritty
  - Editor: neovim
