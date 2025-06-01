@@ -12,7 +12,16 @@ in
 {
   # the home manager module is kind of trash tbh
 
-  home.packages = [ pkgs.rofi-wayland powermenu-script ];
+  home.packages = [
+    (pkgs.rofi-wayland.override (prev: {
+      plugins = [
+      ];
+    }))
+    powermenu-script
+    pkgs.rbw
+    pkgs.rofi-rbw-wayland
+    pkgs.pinentry-all
+  ];
 
   home.file."${config.xdg.configHome}/rofi/config.rasi".source = ./config.rasi;
   home.file."${config.xdg.configHome}/rofi/launcher/style.rasi".source = ./launcher/style.rasi;
@@ -41,6 +50,7 @@ in
       bind = [
         "$mod, R, exec, $menu"
         "$mod SHIFT, M, exec, ${lib.getExe powermenu-script}"
+        "$mod SHIFT, B, exec, rofi-rbw --action type --target password"
       ];
       layerrule = [
         "blur, rofi"
