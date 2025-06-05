@@ -29,6 +29,11 @@
       fsType = "ext4";
       options = ["rw" "users" "exec"];
     };
+  fileSystems."/mnt/nvme2" = {
+      device = "/dev/disk/by-label/nvme2";
+      fsType = "ext4";
+      options = ["rw" "users" "exec"];
+    };
 
   swapDevices =
     [ { device = "/dev/disk/by-label/swap"; }
