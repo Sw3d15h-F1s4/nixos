@@ -5,7 +5,7 @@
     grub.enable = true;
     nix.enable = true;
     locale.enable = true;
-    steelseries.enable = true;
+    udev-rules.enable = true;
     qemu.enable = true;
     hp-printer.enable = true;
 
