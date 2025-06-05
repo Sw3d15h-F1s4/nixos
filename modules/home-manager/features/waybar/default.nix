@@ -34,6 +34,7 @@ in
         modules-center = [
         ];
         modules-right = [
+          "idle_inhibitor"
           "clock"
           "pulseaudio"
           "backlight"
@@ -151,6 +152,14 @@ in
             interval = 30;
             format = "󰋊 {percentage_used}%";
             path = "/";
+        };
+        idle_inhibitor = {
+          format = "{icon}";
+          format-icons = {
+            activated = "";
+            deactivated = "";
+          };
+          timeout = "45";
         };
       };
     };
