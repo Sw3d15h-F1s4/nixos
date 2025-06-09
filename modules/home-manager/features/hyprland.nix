@@ -102,6 +102,10 @@ in
         disable_hyprland_logo = true;
         background_color = "rgb(${colors.bg_dim})";
       };
+
+      windowrule = [
+        "workspace r+1, class:steam_app.*"
+      ];
     };
   };
 }
