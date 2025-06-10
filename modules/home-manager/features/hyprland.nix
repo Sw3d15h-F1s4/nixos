@@ -105,6 +105,9 @@ in
 
       windowrule = [
         "workspace r+1, class:steam_app.*"
+        "monitor 0, class:steam"
+        "monitor 0, class:steam_app.*"
+        "monitor 1, class:vestkop"
       ];
     };
   };
