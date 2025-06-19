@@ -9,6 +9,6 @@
     mako.enable = true;
     rofi.enable = true;
     waybar.enable = true;
-    hyprswitch.enable = true;
+    hyprshell.enable = true;
   };
 }
