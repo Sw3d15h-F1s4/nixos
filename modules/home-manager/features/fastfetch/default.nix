@@ -51,18 +51,23 @@
         }
         {
           type= "cpu";
-          format= "{1}";
+          format= "{1} {8}";
           key= "├  CPU";
         }
         {
           type= "gpu";
-          format= "{2}";
+          format= "{2} {4}";
           key= "├  GPU";
         }
         {
           type= "memory";
           format= "{2}";
           key= "├  RAM";
+        }
+        {
+          type= "disk";
+          format = "{10}: {1} / {2} ({3})";
+          key= "├  Disk";
         }
         "break"
         "colors"
