@@ -14,7 +14,7 @@
 
     luasnip = {
       enable = true;
-    };
+};
 
     cmp = {
       enable = true;
@@ -59,7 +59,22 @@
         lua_ls  = {enable = true;};
         clangd  = {enable = true;};
         nil_ls  = {enable = true;};
-        texlab  = {enable = true;};
+        texlab  = {
+          enable = true;
+          settings = {
+            texlab.build = {
+              executable = "tectonic";
+              args = [
+                "-X"
+                "compile"
+                "%f"
+                "--synctex"
+                "--keep-logs"
+                "--keep-intermediates"
+              ];
+            };
+          };
+        };
         pyright = {enable = true;};
         jsonls  = {enable = true;};
         yamlls  = {enable = true;};
