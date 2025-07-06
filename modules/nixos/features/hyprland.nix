@@ -48,7 +48,6 @@
     brightnessctl
     udiskie
     qt6ct
-    hyprshell #TODO: likely move to separate feature
 
     kdePackages.breeze
     libsForQt5.breeze-qt5
