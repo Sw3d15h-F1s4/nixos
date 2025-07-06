@@ -67,22 +67,11 @@ in
       kill_bind = "ctrl+shift+alt, h";
       windows = {
         scale = 8.5; # between 0 and 15
-        workspaces_per_row = 5;
-        strip_html_from_workspace_title = true;
+        items_per_row = 5;
         overview = {
-          open = {
-            key = "tab";
-            modifier = "alt";
-          };
-          navigate = {
-            forward = "tab";
-            reverse = {
-              mod = "shift";
-            };
-          };
-          other = {
-            hide_filtered = false;
-          };
+          strip_html_from_workspace_title = true;
+          key = "tab";
+          modifier = "alt";
         };
       };
     });
