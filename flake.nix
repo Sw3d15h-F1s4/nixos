@@ -31,11 +31,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # For installing Vivado/Vitis if required.
-    nix-xilinx = {
-      url = "gitlab:doronbehar/nix-xilinx";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { ... } @ inputs:
