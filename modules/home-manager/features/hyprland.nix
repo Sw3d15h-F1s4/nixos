@@ -12,7 +12,6 @@ in
 
     settings = {
       "$mod" = "SUPER";
-      "$terminal" = "uwsm app -- alacritty";
       "$fileManager" = "uwsm app -- nautilus";
 
       exec-once = [

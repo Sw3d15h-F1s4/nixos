@@ -36,6 +36,7 @@ in
     bg_yellow = mkColor;
     bg_purple = mkColor;
     text = mkColor;
+
     red = mkColor;
     orange = mkColor;
     yellow = mkColor;
@@ -43,6 +44,18 @@ in
     cyan = mkColor;
     blue = mkColor;
     purple = mkColor;
+
+    br_red = mkColor;
+    br_orange = mkColor;
+    br_yellow = mkColor;
+    br_green = mkColor;
+    br_cyan = mkColor;
+    br_blue = mkColor;
+    br_purple = mkColor;
+
+    white = mkColor;
+    br_white = mkColor;
+
     darkgray = mkColor;
     lightgray = mkColor;
     gray = mkColor;

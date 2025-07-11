@@ -11,7 +11,8 @@
 
     bundles.hyprland.enable = true;
 
-    alacritty.enable = true;
+    #alacritty.enable = true;
+    ghostty.enable = true;
     nixvim.enable = true;
     neovide.enable = true;
     fastfetch.enable = true;

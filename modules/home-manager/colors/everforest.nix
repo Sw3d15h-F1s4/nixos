@@ -40,19 +40,32 @@
       bg3 = "475258";
       bg4 = "4f585e";
       bg5 = "56635f";
+
       bg_purple = "543a48";
       bg_red = "514045";
       bg_green = "425047";
       bg_blue = "3a515d";
       bg_yellow = "4d4c43";
       text = "d3c6aa";
+
       red = "e67e80";
-      orange = "e69875";
-      yellow = "dbbc7f";
       green = "a7c080";
-      cyan = "83c092";
-      blue = "74bbb3";
+      yellow = "dbbc7f";
+      blue = "7fbbb3";
       purple = "d699b6";
+      orange = "e69875";
+      cyan = "83c092";
+
+      br_red = "f85552";
+      br_green = "8da101";
+      br_yellow = "dfa000";
+      br_blue = "3a94c5";
+      br_purple = "df69ba";
+      br_cyan = "35a77c";
+
+      white = "f2efdf";
+      br_white = "fffbef";
+
       darkgray = "7a8478";
       gray = "859289";
       lightgray = "9da9a0";

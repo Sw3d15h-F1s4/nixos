@@ -57,4 +57,16 @@ in
       };
      };
    }; 
+
+  wayland.windowManager.hyprland = {
+    settings = {
+      "$terminal" = "uwsm app -- alacritty";
+    };
+  };
+
+  programs.waybar.settings.mainBar = {
+    cpu.on-click = "alacritty -e htop";
+    memory.on-click = "alacritty -e htop";
+  };
+
 }

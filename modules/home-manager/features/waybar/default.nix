@@ -106,12 +106,12 @@ in
           format = " {usage}%";
           tooltip = true;
           interval = 1;
-          on-click = "alacritty -e htop";
+          # use current terminal to $term -e htop
         };
         memory = {
           format = " {}%";
           interval = 1;
-          on-click = "alacritty -e htop";
+          # use current terminal to $term -e htop
         };
         network = {
           format-wifi = "󰖩 {essid} ({signalStrength}%)";
