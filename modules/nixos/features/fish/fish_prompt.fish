@@ -63,7 +63,7 @@ function fish_prompt
   end
 
 
-  echo -en (__mode_section)(set_color cyan -b normal)"❯ "(set_color normal)
+  echo -en (set_color cyan -b normal)"❯ "(set_color normal)
 end
 
 
