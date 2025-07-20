@@ -6,8 +6,8 @@
 
   boot = {
     initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" "nvme"];
-    initrd.kernelModules = [ "kvm-amd" "wl" ];
-    extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
+    initrd.kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [];
   };
 
   fileSystems."/" =
