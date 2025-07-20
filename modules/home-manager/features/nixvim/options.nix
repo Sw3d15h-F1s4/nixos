@@ -68,5 +68,11 @@
       wrap = false;
       linebreak = true;
     };
+
+    diagnostic.settings = {
+      underline = true;
+      virtual_text = true;
+      signs = true;
+    };
   };
 }

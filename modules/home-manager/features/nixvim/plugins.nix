@@ -14,42 +14,37 @@
 
     luasnip = {
       enable = true;
-};
+    };
 
-    cmp = {
+    blink-cmp-spell= {
+      enable=true;
+    };
+
+    blink-cmp = {
       enable = true;
-      autoEnableSources = true;
-
       settings = {
-        experimental.ghost_text = true;
-
-        snippet.expand = "luasnip";
-        completion.completeopt = "menu,menuone,noinsert";
-
-        mapping = {
-          "<C-n>" = "cmp.mapping.select_next_item()";
-          "<C-p>" = "cmp.mapping.select_prev_item()";
-          "<C-y>" = "cmp.mapping.confirm({ select = true })";
-          "<C-Space>" = "cmp.mapping.complete {}";
-          "<C-l>" = "cmp.mapping(function() if luasnip.expand_or_locally_jumpable(  ) then luasnip.expand_or_jump(  ) end end, {'i', 's' })";
-          "<C-h>" = "cmp.mapping(function() if luasnip.expand_or_locally_jumpable(-1) then luasnip.expand_or_jump(-1) end end, {'i', 's' })";
+        keymap.preset = "super-tab";
+        sources = {
+          providers = {
+            spell = {
+              module = "blink-cmp-spell";
+              name = "Spell";
+              score_offset = 100;
+              opts = {};
+            };
+          };
+          default = [
+            "lsp"
+            "path"
+            "snippets"
+            "buffer"
+            "spell"
+          ];
         };
-
-        sources = [
-          {name = "nvim_lsp";}
-          {name = "luasnip";}
-          {name = "path";}
-        ];
       };
     };
 
-    cmp-nvim-lsp = {
-      enable = true;
-    };
-    cmp-path = {
-      enable = true;
-    };
-    cmp_luasnip = {
+    nvim-autopairs = {
       enable = true;
     };
 
@@ -78,6 +73,8 @@
         pyright = {enable = true;};
         jsonls  = {enable = true;};
         yamlls  = {enable = true;};
+        bashls = {enable = true;};
+        fish_lsp = {enable = true;};
       };
 
       keymaps = {
@@ -132,14 +129,21 @@
       };
     };
 
+    cursorline = {
+      enable = true;
+    };
+
     mini = {
       enable = true;
       modules = {
         ai = {
           n_lines = 500;
         };
-        surround = { };
       };
+    };
+
+    nvim-surround = {
+     enable = true;
     };
 
     trouble = {
