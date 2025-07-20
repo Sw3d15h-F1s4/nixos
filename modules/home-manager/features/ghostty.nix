@@ -51,7 +51,10 @@ in
 
   wayland.windowManager.hyprland = {
     settings = {
-      "$terminal" = "uwsm app -- ghostty";
+      exec-once = [
+        "uwsm app -- ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
+      ];
+      "$terminal" = "uwsm app -- ghostty --gtk-single-instance=true";
     };
   };
 
