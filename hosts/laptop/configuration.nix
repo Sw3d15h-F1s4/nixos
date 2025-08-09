@@ -9,7 +9,7 @@
   networking.hostName = "laptop";
 
   myNixOS = {
-    bundles.plasma-desktop.enable = true;
+    bundles.hyprland-desktop.enable = true;
 
     bundles.engineering.enable = true;
     # bundles.productivity.enable = true;
@@ -38,6 +38,11 @@
       enable = true;
       enableOffloadCmd = true;
     };
+  };
+
+  services.asusd = {
+    enable = true;
+    enableUserService = true;
   };
 
   home-manager.users = builtins.mapAttrs (name: user: {...}: {
