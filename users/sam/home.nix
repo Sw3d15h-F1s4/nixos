@@ -9,7 +9,6 @@
     bundles.general.enable = true;
     bundles.desktopitems.enable = true;
 
-    bundles.hyprland.enable = false;
     bundles.plasma.enable = true;
 
     alacritty.enable = true;
