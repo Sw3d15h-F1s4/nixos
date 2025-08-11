@@ -9,7 +9,8 @@
   networking.hostName = "desktop";
 
   myNixOS = {
-    bundles.hyprland-desktop.enable = true;
+    #bundles.hyprland-desktop.enable = true;
+    bundles.plasma-desktop.enable = true;
 
     bundles.engineering.enable = true;
     bundles.productivity.enable = true;

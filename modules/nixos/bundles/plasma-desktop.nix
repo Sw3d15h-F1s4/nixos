@@ -17,6 +17,8 @@
 
   environment.systemPackages = with pkgs; [
     qpwgraph
+
+    gapless #even though its gtk, i quite like this music player.
   ];
 
   programs.partition-manager.enable = true;

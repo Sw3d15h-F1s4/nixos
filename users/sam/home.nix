@@ -9,10 +9,11 @@
     bundles.general.enable = true;
     bundles.desktopitems.enable = true;
 
-    bundles.hyprland.enable = true;
+    bundles.hyprland.enable = false;
+    bundles.plasma.enable = true;
 
-    #alacritty.enable = true;
-    ghostty.enable = true;
+    alacritty.enable = true;
+    #ghostty.enable = true;
     nixvim.enable = true;
     neovide.enable = true;
     fastfetch.enable = true;
