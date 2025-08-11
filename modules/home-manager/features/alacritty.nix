@@ -25,7 +25,7 @@ in
       selection.save_to_clipboard = true;
 
       window = {
-        opacity = 0.8;
+        opacity = if (config.myHomeManager.hyprland.enable) then 0.8 else 1.0;
         blur = true;
       };
 
