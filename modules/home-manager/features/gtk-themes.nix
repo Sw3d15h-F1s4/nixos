@@ -23,6 +23,9 @@
       name = "Sans";
       size = 11;
     };
+
+    # h-m pr 7073 workaround for plasma writing to gtkrc :(
+    gtk2.force = true;
   };
 
   qt = {
