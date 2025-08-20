@@ -1,5 +1,3 @@
-
-
 /* Module-specific colors */
 @define-color workspaces-color @foreground;
 @define-color workspaces-focused-bg @green;
@@ -21,7 +19,7 @@
 @define-color battery-charging-color @green;
 @define-color battery-warning-color @yellow;
 @define-color battery-critical-color @red;
-@define-color network-color @blue;
+@define-color network-color @red;
 @define-color network-disconnected-color @red;
 @define-color pulseaudio-color @orange;
 @define-color pulseaudio-muted-color @red;
@@ -38,18 +36,16 @@
 * {
     /* Base styling for all modules */
     border: none;
-    border-radius: 0;
+    border-radius: 20;
     font-family: "FiraCode Nerd Font";
     font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: @background;
+    background-color: transparent;
     color: @foreground;
 }
-
-
 
 /* Common module styling with border-bottom */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
@@ -58,169 +54,168 @@ window#waybar {
 #idle_inhibitor, #tray {
     padding: 0 10px;
     margin: 0 2px;
-    border-bottom: 2px solid transparent;
-    background-color: transparent;
 }
+
 
 /* Workspaces styling */
 #workspaces button {
-    padding: 0 10px;
-    background-color: transparent;
+    padding: 5px 5px;
+    background-color: @background;
     color: @workspaces-color;
-    margin: 0;
+    margin: 0 5px;
 }
 
 #workspaces button:hover {
-    background: @background-light;
+    background-color: @background-light;
     box-shadow: inherit;
 }
 
 #workspaces button.focused {
-    box-shadow: inset 0 -2px @workspaces-focused-fg;
-    color: @workspaces-focused-fg;
+    background-color: @workspaces-focused-fg;
+    color: @background;
     font-weight: 900;
 }
 
 #workspaces button.urgent {
     background-color: @workspaces-urgent-bg;
-    color: @workspaces-urgent-fg;
+    color: @background;
 }
 
 /* Module-specific styling */
 #mode {
-    color: @mode-color;
-    border-bottom-color: @mode-color;
+    background-color: @mode-color;
+    color: @background;
 }
 
 #mpd {
-    color: @mpd-color;
-    border-bottom-color: @mpd-color;
+    background-color: @mpd-color;
+    color: @background;
 }
 
 #mpd.disconnected,
 #mpd.stopped {
-    color: @foreground;
-    border-bottom-color: transparent;
+    background-color: transparent;
+    color: @background;
 }
 
 #custom-weather {
-    color: @weather-color;
-    border-bottom-color: @weather-color;
+    background-color: @weather-color;
+    color: @background;
 }
 
 #custom-playerctl {
-    color: @playerctl-color;
-    border-bottom-color: @playerctl-color;
+    background-color: @playerctl-color;
+    color: @background;
 }
 
 #custom-playerctl.Playing {
-    color: @cyan;
-    border-bottom-color: @cyan;
+    background-color: @cyan;
+    color: @background;
 }
 
 #custom-playerctl.Paused {
-    color: @orange;
-    border-bottom-color: @orange;
+    background-color: @orange;
+    color: @background;
 }
 
 #clock {
-    color: @clock-color;
-    border-bottom-color: @clock-color;
+    background-color: @clock-color;
+    color: @background;
 }
 
 #cpu {
-    color: @cpu-color;
-    border-bottom-color: @cpu-color;
+    background-color: @cpu-color;
+    color: @background;
 }
 
 #memory {
-    color: @memory-color;
-    border-bottom-color: @memory-color;
+    background-color: @memory-color;
+    color: @background;
 }
 
 #temperature {
-    color: @temperature-color;
-    border-bottom-color: @temperature-color;
+    background-color: @temperature-color;
+    color: @background;
 }
 
 #temperature.critical {
-    color: @temperature-critical-color;
-    border-bottom-color: @temperature-critical-color;
+    background-color: @temperature-critical-color;
+    color: @background;
 }
 
 #battery {
-    color: @battery-color;
-    border-bottom-color: @battery-color;
+    background-color: @battery-color;
+    color: @background;
 }
 
 #battery.charging, #battery.plugged {
-    color: @battery-charging-color;
-    border-bottom-color: @battery-charging-color;
+    background-color: @battery-charging-color;
+    color: @background;
 }
 
 #battery.warning:not(.charging) {
-    color: @battery-warning-color;
-    border-bottom-color: @battery-warning-color;
+    background-color: @battery-warning-color;
+    color: @background;
 }
 
 #battery.critical:not(.charging) {
-    color: @battery-critical-color;
-    border-bottom-color: @battery-critical-color;
+    background-color: @battery-critical-color;
+    color: @background;
 }
 
 #network {
-    color: @network-color;
-    border-bottom-color: @network-color;
+    background-color: @network-color;
+    color: @background;
 }
 
 #network.disconnected {
-    color: @network-disconnected-color;
-    border-bottom-color: @network-disconnected-color;
+    background-color: @network-disconnected-color;
+    color: @background;
 }
 
 #pulseaudio {
-    color: @pulseaudio-color;
-    border-bottom-color: @pulseaudio-color;
+    background-color: @pulseaudio-color;
+    color: @background;
 }
 
 #pulseaudio.muted {
-    color: @pulseaudio-muted-color;
-    border-bottom-color: @pulseaudio-muted-color;
+    background-color: @pulseaudio-muted-color;
+    color: @background;
 }
 
 #backlight {
-    color: @backlight-color;
-    border-bottom-color: @backlight-color;
+    background-color: @backlight-color;
+    color: @background;
 }
 
 #disk {
-    color: @disk-color;
-    border-bottom-color: @disk-color;
+    background-color: @disk-color;
+    color: @background;
 }
 
 #custom-uptime {
-    color: @uptime-color;
-    border-bottom-color: @uptime-color;
+    background-color: @uptime-color;
+    color: @background;
 }
 
 #custom-updates {
-    color: @updates-color;
-    border-bottom-color: @updates-color;
+    background-color: @updates-color;
+    color: @background;
 }
 
 #custom-quote {
-    color: @quote-color;
-    border-bottom-color: @quote-color;
+    background-color: @quote-color;
+    color: @background;
 }
 
 #idle_inhibitor {
-    color: @idle-inhibitor-color;
-    border-bottom-color: transparent;
+    background-color: transparent;
+    color: @background;
 }
 
 #idle_inhibitor.activated {
-    color: @idle-inhibitor-active-color;
-    border-bottom-color: @idle-inhibitor-active-color;
+    background-color: @idle-inhibitor-active-color;
+    color: @background;
 }
 
 #tray {
@@ -235,6 +230,5 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    color: @red;
-    border-bottom-color: @red;
+    background-color: @red;
 }
