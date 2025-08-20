@@ -40,6 +40,8 @@
           ];
         })
         (config.myNixOS.home-users);
+
+      backupFileExtension = "HM_BKUP";
     };
 
     users.users = builtins.mapAttrs (
