@@ -6,7 +6,8 @@
     nix.enable = true;
     locale.enable = true;
     udev-rules.enable = true;
-    qemu.enable = true;
+    #qemu.enable = true;
+    vmware.enable = true;
     hp-printer.enable = true;
 
     bundles.users.enable = true;
