@@ -50,9 +50,7 @@
     qt6ct
 
     kdePackages.breeze
-    libsForQt5.breeze-qt5
     kdePackages.breeze-icons
-    libsForQt5.breeze-icons
   ];
 
   environment.sessionVariables = {
