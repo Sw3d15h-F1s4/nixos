@@ -5,7 +5,7 @@
     onlyoffice-bin_latest
     # libreoffice-qt6-fresh
     krita
-    gimp
+    gimp3
     inkscape
     obs-studio
     kdePackages.kdenlive
