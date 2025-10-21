@@ -5,7 +5,7 @@ let
 
   powermenu-script = pkgs.writeShellApplication {
     name = "powermenu.sh";
-    runtimeInputs = [ pkgs.rofi-wayland ];
+    runtimeInputs = [ pkgs.rofi ];
     text = builtins.readFile ./powermenu/powermenu.sh;
   };
 in
@@ -13,7 +13,7 @@ in
   # the home manager module is kind of trash tbh
 
   home.packages = [
-    (pkgs.rofi-wayland.override (prev: {
+    (pkgs.rofi.override (prev: {
       plugins = [
       ];
     }))
