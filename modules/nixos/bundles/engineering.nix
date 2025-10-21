@@ -15,6 +15,7 @@ in
     (octaveFull.withPackages (ps: with ps; [
       symbolic
       control
+      signal
     ]))
   ] ++ stable-pkgs;
 
