@@ -2,8 +2,8 @@
 {
   imports = [outputs.homeManagerModules.default];
 
-  programs.git.userName = "Sw3d15h-F1s4";
-  programs.git.userEmail = "samjt36@gmail.com";
+  programs.git.settings.user.email = "Sw3d15h-F1s4";
+  programs.git.settings.user.name  = "samjt36@gmail.com";
 
   myHomeManager = {
     bundles.general.enable = true;
