@@ -159,10 +159,14 @@
     };
 
     lualine = {
-      enable = true;
+      enable = false; # you can change this back when luarocks figures its shit out ig
       settings = {
         extensions = [ "nvim-tree" "toggleterm" "trouble" "quickfix"];
       };
+    };
+
+    mini-statusline = {
+      enable = true;
     };
 
     schemastore = {
