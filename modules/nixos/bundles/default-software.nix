@@ -22,11 +22,13 @@
     zellij
     eza
     bat
+    yazi
 
     # nice to have a scripting language
     python312
     chromium
     unrar
+    unzip
   ];
 
   programs.neovim = {
