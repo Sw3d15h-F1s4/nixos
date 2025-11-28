@@ -47,7 +47,7 @@
     hyprpolkitagent #TODO: likely move to separate feature
     brightnessctl
     udiskie
-    qt6ct
+    qt6Packages.qt6ct
 
     kdePackages.breeze
     kdePackages.breeze-icons

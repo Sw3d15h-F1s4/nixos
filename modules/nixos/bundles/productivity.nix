@@ -2,7 +2,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs;[
-    onlyoffice-bin_latest
+    onlyoffice-desktopeditors
     # libreoffice-qt6-fresh
     krita
     gimp3
