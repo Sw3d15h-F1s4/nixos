@@ -27,7 +27,7 @@ in
         gaps_in = 5;
         gaps_out = 20;
 
-        resize_on_border = true;
+        #resize_on_border = true;
         "col.active_border" = "rgba(${colors.green}ff)";
         "col.inactive_border" = "rgba(${colors.bg_green}ff)";
       };
@@ -51,7 +51,7 @@ in
         kb_layout = "us";
         kb_variant = "";
 
-        follow_mouse = 0;
+        follow_mouse = 1;
       };
 
       bind = [
