@@ -15,6 +15,8 @@
     qalculate-gtk
 
     bitwarden-desktop
+
+    foliate
   ];
 
   hardware.i2c = {
