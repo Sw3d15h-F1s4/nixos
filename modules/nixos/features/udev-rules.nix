@@ -4,8 +4,8 @@
   # Mostly disabled since I never use any of it.
 
   # environment.systemPackages = with pkgs; [
-  #   # Manages for Steelseries Arctis 7 Nova headset
-  #   headsetcontrol
+  #   # "chatmix" Steelseries Arctis 7 Nova headset
+  #   headsetcontrol # doesnt really work
   #   # Manages Steelseries Prime Wireless mouse
   #   rivalcfg
   # ];
@@ -23,17 +23,7 @@
     SUBSYSTEM=="usb", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="1840", MODE="0666"
 
     # SteelSeries Arctis Nova 7
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="2202", TAG+="uaccess"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="2206", TAG+="uaccess"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="220a", TAG+="uaccess"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="223a", TAG+="uaccess"
-
-    # SteelSeries Arctis (7/Pro)
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="1260", TAG+="uaccess"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="12ad", TAG+="uaccess"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="1252", TAG+="uaccess"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="1280", TAG+="uaccess"
-
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="2202", MODE="0666"
 
     ##### Keychron Devices #####
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3434", ATTRS{idProduct}=="d030", TAG+="uaccess", MODE="0660", GROUP="users", TAG+="udev-acl"
