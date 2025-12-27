@@ -1,4 +1,17 @@
 { pkgs, ... }:
+let everforest-pkg =
+    pkgs.everforest-gtk-theme.overrideAttrs (oldAttrs: {
+      installPhase = ''
+      runHook preInstall
+      mkdir -p "$out/share/"{themes,icons}
+      cp -a icons/* "$out/share/icons/"
+      bash themes/install.sh -d "$out/share/themes" -c dark -n Everforest
+      runHook postInstall
+      '';
+      buildInputs = oldAttrs.buildInputs ++ [pkgs.sassc];
+      dontFixup = true;
+  });
+in
 {
   home.pointerCursor = {
     gtk.enable = true;
@@ -10,12 +23,12 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.everforest-gtk-theme;
-      name = "Everforest-Dark-B-LB";
+      package = everforest-pkg;
+      name = "Everforest-Dark";
     };
 
     iconTheme = {
-      package = pkgs.everforest-gtk-theme;
+      package = everforest-pkg;
       name = "Everforest-Dark";
     };
 
