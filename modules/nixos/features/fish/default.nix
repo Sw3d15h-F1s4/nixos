@@ -1,5 +1,6 @@
 { pkgs, lib, ...}:
 {
+
   programs.fish = {
     enable = lib.mkDefault true;
     interactiveShellInit = ''
@@ -28,4 +29,5 @@
     autopair
     transient-fish
   ];
+
 }

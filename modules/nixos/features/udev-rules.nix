@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  
+
   # Mostly disabled since I never use any of it.
 
   # environment.systemPackages = with pkgs; [
@@ -13,7 +13,6 @@
   services.udev.extraRules = ''
 
     ##### Steelseries Devices #####
-
     # SteelSeries Prime Wireless (wired mode)
     SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="1842", MODE="0666"
     SUBSYSTEM=="usb", ATTRS{idVendor}=="1038", ATTRS{idProduct}=="1842", MODE="0666"
@@ -41,11 +40,5 @@
     SUBSYSTEMS=="input", ATTRS{id/product}=="3010", ATTRS{id/vendor}=="2dc8", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
 
   '';
-
-  # enable openrgb for Apex 7
-  # services.hardware.openrgb = {
-  #   enable = true;
-  #   package = pkgs.openrgb-with-all-plugins;
-  # };
 
 }

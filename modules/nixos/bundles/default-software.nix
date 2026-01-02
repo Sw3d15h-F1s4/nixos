@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
 
+  environment.systemPackages = with pkgs; [
     # Process/system monitors
     gtop
     htop
@@ -23,12 +23,11 @@
     eza
     bat
     yazi
+    unrar
+    unzip
 
     # nice to have a scripting language
     python312
-    chromium
-    unrar
-    unzip
   ];
 
   programs.neovim = {
@@ -48,9 +47,6 @@
 
   programs.fish.enable = true;
 
-  programs.firefox = {
-    enable = true;
-  };
 
   myNixOS = {
     fish.enable = true;
@@ -62,4 +58,5 @@
   };
 
   services.flatpak.enable = true;
+
 }

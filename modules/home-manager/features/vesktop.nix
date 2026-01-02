@@ -1,6 +1,5 @@
-{ mylib, config, ... }:
+{ config, ... }:
 let
-  clib = mylib.colors;
   colors = config.myHomeManager.colors;
 in
 {

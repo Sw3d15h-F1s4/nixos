@@ -41,10 +41,4 @@ in
     gtk2.force = true;
   };
 
-  qt = {
-    enable = true;
-    style = {
-      package = pkgs.adwaita-qt;
-    };
-  };
 }

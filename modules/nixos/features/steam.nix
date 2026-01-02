@@ -1,6 +1,6 @@
 { pkgs, ... }:
-
 {
+
   environment.systemPackages = with pkgs; [
     mangohud
     protonplus
@@ -35,4 +35,5 @@
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/sam/.steam/root/compatibilitytools.d";
   };
+
 }

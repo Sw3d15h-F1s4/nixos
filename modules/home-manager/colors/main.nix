@@ -9,6 +9,7 @@ let
   };
 in
 {
+
   options.myHomeManager.colors = {
     pallete-name = lib.mkOption {
       type = lib.types.str;

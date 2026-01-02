@@ -1,5 +1,6 @@
 { ... }:
 {
+
   myHomeManager.colors = {
     pallete-name = "everforest-dark";
     pallete-variant = "medium";
@@ -86,5 +87,6 @@
   myHomeManager = {
     colors.main.enable = true;
   };
+
 }
 

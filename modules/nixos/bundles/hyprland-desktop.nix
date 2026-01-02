@@ -1,5 +1,6 @@
 { lib, pkgs, ... }:
 {
+
   myNixOS = {
     bundles.main.enable = true;
     sddm.enable = lib.mkDefault true;
@@ -32,20 +33,21 @@
     # Image viewer
     image-roll
 
-    # Wifi settings
-    networkmanagerapplet
-
     # note taking
     rnote
 
+    # ebook reader
+    foliate
+
+    # file explorer
     nautilus
     file-roller
 
-    pwvucontrol
-    helvum
     luminance
 
     resources
+
+    hyprpwcenter
   ];
 
 }

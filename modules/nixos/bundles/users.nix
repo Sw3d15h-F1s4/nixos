@@ -1,12 +1,6 @@
+{ lib, config, inputs, outputs, mylib, ... }: 
 {
-  lib,
-  config,
-  inputs,
-  outputs,
-  mylib,
-  ...
-}:
-{
+
   options.myNixOS.home-users = lib.mkOption {
     type = lib.types.attrsOf (lib.types.submodule {
       options = {
@@ -55,4 +49,5 @@
         // user.userSettings
     ) (config.myNixOS.home-users);
   };
+
 }

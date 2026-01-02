@@ -1,11 +1,13 @@
 # Miscellaneous desktop-oriented graphical software.
 { pkgs, ... }:
 {
+
   environment.systemPackages = with pkgs; [
     (discord.override {
       withVencord = true;
     })
     vesktop
+
     prismlauncher
 
     bottles
@@ -15,17 +17,15 @@
     qalculate-gtk
 
     bitwarden-desktop
-
-    foliate
   ];
-
-  hardware.i2c = {
-    enable = true;
-  };
 
   hardware.opentabletdriver = {
     enable = true;
     daemon.enable = true;
+  };
+
+  programs.firefox = {
+    enable = true;
   };
 
 }

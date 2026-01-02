@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 {
   # The NixOS side of enabling hyprland
   programs.hyprland = {
@@ -44,21 +44,17 @@
   services.gvfs.enable = true;
 
   environment.systemPackages = with pkgs; [
-    hyprpolkitagent #TODO: likely move to separate feature
-    brightnessctl
+    hyprpolkitagent
     udiskie
-    qt6Packages.qt6ct
-
-    kdePackages.breeze
     kdePackages.breeze-icons
-  ];
 
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-  };
+    inputs.hyprshutdown.packages.x86_64-linux.default
+  ];
 
   qt = {
     enable = true;
     platformTheme = "qt5ct";
+    style = "breeze";
   };
+
 }

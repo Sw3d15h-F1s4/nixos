@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+
   xdg.desktopEntries = {
     # "net.lutris.Lutris" = {
     #   name = "Lutris";
@@ -30,4 +31,5 @@
       };
     };
   };
+
 }

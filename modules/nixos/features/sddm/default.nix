@@ -9,6 +9,7 @@ let
   };
 in
 {
+
   services.displayManager.sddm = {
     enable = lib.mkDefault true;
     wayland.enable = true;
@@ -20,4 +21,5 @@ in
   environment.systemPackages = [
     sddm-astronaut
   ];
+
 }

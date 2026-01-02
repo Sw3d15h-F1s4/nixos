@@ -1,5 +1,6 @@
 { pkgs, config, ...}:
 {
+
   environment.systemPackages = with pkgs; [
     spice
     win-spice
@@ -36,4 +37,5 @@
       source = config.virtualisation.libvirtd.qemu.package + "/share/qemu/edk2-i386-vars.fd";
     };
   };
+
 }

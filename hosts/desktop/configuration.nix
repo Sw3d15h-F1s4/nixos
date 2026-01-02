@@ -10,7 +10,6 @@
 
   myNixOS = {
     bundles.hyprland-desktop.enable = true;
-    #bundles.plasma-desktop.enable = true;
 
     bundles.engineering.enable = true;
     bundles.productivity.enable = true;
@@ -24,7 +23,7 @@
       sam = {
         userConfig = ../../users/sam/home.nix;
         userSettings = {
-          extraGroups = ["networkmanager" "wheel" "dialout" "scanner" "lp" "gamemode"];
+          extraGroups = ["networkmanager" "wheel" "dialout" "scanner" "lp" "gamemode" "i2c"];
           description = "Sam T";
         };
       };
@@ -36,6 +35,10 @@
     liquidctl
     scrcpy
   ];
+
+  hardware.i2c = {
+    enable = true;
+  };
 
   home-manager.users = builtins.mapAttrs (name: user: {...}: {
     imports = [

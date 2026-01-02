@@ -26,10 +26,20 @@ let
     })
     (mylib.filesIn ./bundles);
 
+  services =
+    mylib.extendModules
+    ( name: {
+      extraOptions = {
+        myNixOS.services.${name}.enable = lib.mkEnableOption "enable the ${name} service";
+      };
+      configExtension = config: (lib.mkIf cfg.services.${name}.enable config);
+    })
+    (mylib.filesIn ./services);
+
 in {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-  ] ++ features ++ bundles;
+  ] ++ features ++ bundles ++ services;
 
 
   config = {
@@ -37,4 +47,5 @@ in {
     nixpkgs.config.allowUnfree = true;
     system.stateVersion = "23.11";
   };
+
 }
