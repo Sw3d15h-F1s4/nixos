@@ -47,8 +47,6 @@
     hyprpolkitagent
     udiskie
     kdePackages.breeze-icons
-
-    inputs.hyprshutdown.packages.x86_64-linux.default
   ];
 
   qt = {
