@@ -1,10 +1,5 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
+ * Adapted from adi1090x
  **/
 
 /*****----- Configuration -----*****/
@@ -24,7 +19,7 @@ configuration {
     inputbar-spacing:            0px;
     list-spacing:                0px;
     general-padding:             20px;
-    element-padding:             10px;
+    element-padding:             00px;
     element-radius:              20px;
     general-radius:              100%;
     element-font:                "FiraCode Nerd Font Mono 48";
@@ -85,18 +80,18 @@ dummy {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "SYSTEM";
+    str:                         "Power Menu";
     padding:                     var(general-padding);
     border-radius:               var(general-radius);
-    background-color:            @background;
-    text-color:                  @urgent;
+    background-color:            @urgent;
+    text-color:                  @background;
 }
 prompt {
     enabled:                     true;
     padding:                     var(general-padding);
     border-radius:               var(general-radius);
-    background-color:            @background;
-    text-color:                  @active;
+    background-color:            @active;
+    text-color:                  @background;
 }
 
 /*****----- Message -----*****/
@@ -142,10 +137,10 @@ listview {
     fixed-columns:               true;
     
     spacing:                     var(list-spacing);
-    margin:                      0px;
+    margin:                      70px 0px 0px 0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               var(element-radius);
+    border-radius:               var(general-radius);
     border-color:                @selected;
     background-color:            @background;
     text-color:                  @foreground;
@@ -159,7 +154,7 @@ element {
     margin:                      0px;
     padding:                     var(element-padding);
     border:                      0px solid;
-    border-radius:               var(element-radius);
+    border-radius:               var(general-radius);
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;

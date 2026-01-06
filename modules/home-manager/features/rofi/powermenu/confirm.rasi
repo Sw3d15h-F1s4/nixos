@@ -1,10 +1,5 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
+ * Adapted from adi1090x
  **/
 
 /*****----- Configuration -----*****/
@@ -38,9 +33,9 @@ mainbox {
 message {
     margin:                      0px;
     padding:                     20px;
-    border-radius:               20px;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    border-radius:               100%;
+    background-color:            @selected;
+    text-color:                  @background;
 }
 textbox {
     background-color:            inherit;
