@@ -1,6 +1,5 @@
-{ mylib, config, ... }:
+{ config, ... }:
 let
-  clib = mylib.colors;
   colors = config.myHomeManager.colors;
 in
 {
@@ -102,8 +101,6 @@ in
         background_color = "rgb(${colors.bg_dim})";
       };
 
-      windowrule = [
-      ];
     };
   };
 }

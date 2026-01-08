@@ -18,7 +18,7 @@
 
   wayland.windowManager.hyprland.settings = {
     windowrule = [
-      "opacity 0.8, class:neovide"
+      "match:class neovide, opacity 0.8"
     ];
   };
 

@@ -2,7 +2,7 @@
 {
   wayland.windowManager.hyprland.settings = {
       windowrule = [
-        "float, class:qalculate-gtk"
+        "match:class qalculate-gtk, float on"
       ];
   };
 }

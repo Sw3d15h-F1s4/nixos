@@ -53,8 +53,8 @@ in
         "$mod SHIFT, B, exec, rofi-rbw --action type --target password"
       ];
       layerrule = [
-        "blur, rofi"
-        "ignorezero, rofi"
+        "blur on, match:namespace rofi"
+        "ignore_alpha 0, match:namespace rofi"
       ];
     };
   };
