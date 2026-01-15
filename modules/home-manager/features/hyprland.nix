@@ -99,6 +99,7 @@ in
       misc = {
         disable_hyprland_logo = true;
         background_color = "rgb(${colors.bg_dim})";
+        disable_splash_rendering = true;
       };
 
     };
