@@ -46,13 +46,14 @@
   environment.systemPackages = with pkgs; [
     hyprpolkitagent
     udiskie
+
+    kdePackages.breeze # keep this here since the qt.style = "breeze" option doesn't work.
     kdePackages.breeze-icons
   ];
 
   qt = {
     enable = true;
     platformTheme = "qt5ct";
-    style = "breeze";
   };
 
 }
