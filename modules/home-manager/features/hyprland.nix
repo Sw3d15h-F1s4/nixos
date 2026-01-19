@@ -17,14 +17,9 @@ in
         "uwsm app -- udiskie"
       ];
 
-      monitor = [
-        # "desc:Dell Inc. S2719DGF FRG05V2, 2560x1440@144, auto, 1, vrr, 2"
-        # "desc:Dell Inc. DELL S2721DS 1N3YTY3, 2560x1440@75, auto, 1"
-      ];
-
       general = {
         gaps_in = 5;
-        gaps_out = 20;
+        gaps_out = 10;
 
         #resize_on_border = true;
         "col.active_border" = "rgba(${colors.green}ff)";

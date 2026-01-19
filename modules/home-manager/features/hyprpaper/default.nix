@@ -7,6 +7,8 @@
         monitor = "";
         path = "${./wallpaper.png}";
       };
+
+      splash = false;
     };
   };
 }
