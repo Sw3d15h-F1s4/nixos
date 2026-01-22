@@ -9,7 +9,8 @@
     gtk-themes.enable = true;
     rofi.enable       = true;
     hyprnome.enable   = true;
-    hyprpanel.enable  = true;
+    waybar.enable     = true;
+    mako.enable       = true;
   };
 
 }
