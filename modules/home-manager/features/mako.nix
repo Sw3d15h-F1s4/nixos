@@ -20,8 +20,8 @@ in
 
   wayland.windowManager.hyprland.settings = {
       layerrule = [
-        "blur, notifications"
-        "ignorezero, notifications"
+        "blur on, match:namespace notifications"
+        "ignore_alpha 0, match:namespace notifications"
       ];
   };
 }
