@@ -43,11 +43,15 @@
     nautilus
     file-roller
 
+    # brighness control
     luminance
 
+    # system monitor
     resources
 
-    hyprpwcenter
+    # sound management
+    pwvucontrol
+    helvum
   ];
 
 }
