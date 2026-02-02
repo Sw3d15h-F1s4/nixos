@@ -1,5 +1,5 @@
 # Contains office software, editing software, etc.
-{ pkgs, ... }:
+{ pkgs, pkgs-stable, ... }:
 {
 
   environment.systemPackages = with pkgs;[
@@ -8,7 +8,7 @@
     gimp3
     inkscape
     obs-studio
-    kdePackages.kdenlive
+    pkgs-stable.kdePackages.kdenlive
   ];
 
 }
