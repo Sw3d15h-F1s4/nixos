@@ -47,5 +47,11 @@
   })
   (config.myNixOS.home-users);
 
+  boot = {
+    # enable NTSYNC
+    kernelPackages = pkgs.linuxKernel.packageAliases.linux_latest;
+    kernelModules = [ "ntsync" ];
+  };
+
   system.stateVersion = "23.11";
 }
