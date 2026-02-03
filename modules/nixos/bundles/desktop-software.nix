@@ -10,7 +10,9 @@
 
     prismlauncher
 
-    bottles
+    (bottles.override {
+      removeWarningPopup = true;
+    })
 
     thunderbird-latest
 
