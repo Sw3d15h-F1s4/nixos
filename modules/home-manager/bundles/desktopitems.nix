@@ -19,17 +19,6 @@
     #   };
     # };
 
-    matlab = {
-      name = "Matlab";
-      exec = "env XDG_CURRENT_DESKTOP=GNOME GTK_THEME=Adwaita:light ${pkgs.matlab}/bin/matlab -desktop %F";
-      icon = "matlab";
-      mimeType = ["text/x-octave" "text/x-matlab"];
-      type = "Application";
-      settings = {
-        Keywords = "science;math;matrix;numerical computation;plotting";
-        Version = "1.4";
-      };
-    };
   };
 
 }

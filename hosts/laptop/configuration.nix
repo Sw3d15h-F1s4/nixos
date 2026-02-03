@@ -15,7 +15,6 @@
 
     nvidiagpu.enable = true;
     steam.enable = true;
-    matlab.enable = true;
 
     home-users = {
       sam = {

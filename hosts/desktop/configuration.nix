@@ -16,7 +16,6 @@
 
     amdgpu.enable = true;
     steam.enable = true;
-    matlab.enable = true;
     #minecraft.enable = true;
 
     home-users = {
