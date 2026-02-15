@@ -60,7 +60,7 @@ in
           format = "<span style=\\\"italic\\\">{}</span>";
         };
 
-        "hyprland/window" =- {
+        "hyprland/window" = {
           format = "{title}";
           max-length = 30;
           icon = true;
