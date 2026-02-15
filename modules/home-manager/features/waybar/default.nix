@@ -25,56 +25,54 @@ in
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
+        margin-top = 5;
+        spacing = 5;
+
         modules-left = [
+          "user"
           "hyprland/workspaces"
           "hyprland/submap"
         ];
+
         modules-center = [
+          "hyprland/window"
         ];
+
         modules-right = [
           "idle_inhibitor"
-          "clock"
           "pulseaudio"
-          "backlight"
           "network"
           "cpu"
           "memory"
-          "temperature"
           "disk"
+          "clock"
           "tray"
         ];
+
+
         "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
           format = "{name}";
-          format-icons = {
-            "1" = "󰖟";
-            "2" = "";
-            "3" = "";
-            "4" = "󰭹";
-            "5" = "󰕧";
-            "6" = "";
-            "7" = "";
-            "8" = "󰣇";
-            "9" = "";
-            "10" = "";
-          };
-          persistent_workspaces = {
-            "1"= [];
-            "2"= [];
-            "3"= [];
-            "4"= [];
-            "5"= [];
-          };
         };
+
         "hyprland/submap" = {
           format = "<span style=\\\"italic\\\">{}</span>";
         };
+
+        "hyprland/window" =- {
+          format = "{title}";
+          max-length = 30;
+          icon = true;
+          icon-size = 18;
+        };
+
+
         tray = {
           icon-size = 18;
-          spacing = 10;
+          spacing = 5;
         };
+
         clock = {
           format = "󰥔 {:%I:%M p}";
           format-alt = "󰃮 {:%Y-%m-%d}";
@@ -101,28 +99,32 @@ in
             on-scroll-down = "shift_down";
           };
         };
+
         cpu = {
-          format = " {usage}%";
+          format = " {usage:02}%";
           tooltip = true;
           interval = 1;
           # use current terminal to $term -e htop
         };
+
         memory = {
-          format = " {}%";
+          format = " {percentage:02}%";
           interval = 1;
           # use current terminal to $term -e htop
         };
+
         network = {
-          format-wifi = "󰖩 {essid} ({signalStrength}%)";
+          format-wifi = "󰖩 {essid} ({signalStrength:02}%)";
           format-ethernet = "󰈀 {ifname}";
           format-linked = "󰈀 {ifname} (No IP)";
           format-disconnected = "󰖪 Disconnected";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
           tooltip-format = "{ifname}: {ipaddr}";
         };
+
         pulseaudio = {
-          format = "{icon} {volume}%";
-          format-bluetooth = "󰂰 {volume}%";
+          format = "{icon} {volume:02}%";
+          format-bluetooth = "󰂰 {volume:02}%";
           format-bluetooth-muted = "󰂲 {icon}";
           format-muted = "󰝟";
           format-icons = {
@@ -136,30 +138,28 @@ in
           };
           on-click = "pwvucontrol";
         };
-        backlight = {
-            format = "{icon} {percent}%";
-            format-icons = ["󰃞" "󰃟" "󰃠"];
-            on-scroll-up = "brightnessctl set +5%";
-            on-scroll-down = "brightnessctl set 5%-";
-        };
-        temperature = {
-            critical-threshold = 80;
-            format = "{icon} {temperatureC}°C";
-            format-icons = ["󱃃" "󰔏" "󱃂"];
-        };
+
         disk = {
             interval = 30;
-            format = "󰋊 {percentage_used}%";
+            format = "󰋊 {percentage_used:02}%";
             path = "/";
         };
+
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
             activated = "";
             deactivated = "";
           };
-          timeout = "45";
         };
+
+        user = {
+          interval = 60;
+          format = "{user} {work_H}:{work_M}";
+          icon = false;
+          open-on-click = false;
+        };
+
       };
     };
 

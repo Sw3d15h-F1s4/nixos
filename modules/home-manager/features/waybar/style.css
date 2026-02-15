@@ -10,26 +10,26 @@
 @define-color mpd-color @magenta;
 @define-color weather-color @magenta;
 @define-color playerctl-color @magenta;
-@define-color clock-color @blue;
-@define-color cpu-color @green;
-@define-color memory-color @magenta;
+@define-color clock-color @cyan;
+@define-color cpu-color @yellow;
+@define-color memory-color @green;
 @define-color temperature-color @yellow;
 @define-color temperature-critical-color @red;
 @define-color battery-color @cyan;
 @define-color battery-charging-color @green;
 @define-color battery-warning-color @yellow;
 @define-color battery-critical-color @red;
-@define-color network-color @red;
-@define-color network-disconnected-color @red;
-@define-color pulseaudio-color @orange;
-@define-color pulseaudio-muted-color @red;
+@define-color network-color @orange;
+@define-color network-disconnected-color @yellow;
+@define-color pulseaudio-color @red;
+@define-color pulseaudio-muted-color @orange;
 @define-color backlight-color @yellow;
-@define-color disk-color @cyan;
+@define-color disk-color @blue;
 @define-color uptime-color @green;
 @define-color updates-color @orange;
 @define-color quote-color @green;
-@define-color idle-inhibitor-color @foreground;
-@define-color idle-inhibitor-active-color @red;
+@define-color idle-inhibitor-color @magenta;
+@define-color idle-inhibitor-active-color @magenta;
 
 
 
@@ -47,33 +47,42 @@ window#waybar {
     color: @foreground;
 }
 
+#window {
+  background-color: @background;
+  padding: 0 20px;
+}
+
 /* Common module styling with border-bottom */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
 #idle_inhibitor, #tray {
     padding: 0 10px;
-    margin: 0 2px;
+    /* margin: 0 2px; */
 }
 
+#workspaces {
+  background-color: @background;
+  padding: 1px 5px;
+}
 
 /* Workspaces styling */
 #workspaces button {
-    padding: 5px 5px;
-    background-color: @background;
+    padding: 5px 7px;
+    background-color: transparent;
     color: @workspaces-color;
-    margin: 0 5px;
+    margin: 0 2px;
+}
+
+#workspaces button.active {
+    font-weight: 900;
+    color: @workspaces-focused-fg
 }
 
 #workspaces button:hover {
     background-color: @background-light;
     box-shadow: inherit;
-}
-
-#workspaces button.focused {
-    background-color: @workspaces-focused-fg;
-    color: @background;
-    font-weight: 900;
+    color: @foreground;
 }
 
 #workspaces button.urgent {
@@ -209,8 +218,9 @@ window#waybar {
 }
 
 #idle_inhibitor {
-    background-color: transparent;
-    color: @background;
+    background-color: @background;
+    color: @foreground;
+    padding: 0 20 0 15;
 }
 
 #idle_inhibitor.activated {
@@ -221,7 +231,7 @@ window#waybar {
 #tray {
     background-color: transparent;
     padding: 0 10px;
-    margin: 0 2px;
+    margin: 0 20px 0 0;
 }
 
 #tray > .passive {
@@ -231,4 +241,11 @@ window#waybar {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: @red;
+}
+
+#user {
+  background-color: @background;
+  color: @cyan;
+  padding: 0 10px;
+  margin: 0 0 0 10px;
 }
