@@ -19,6 +19,8 @@
   environment.systemPackages = with pkgs; [
     # Music player
     gapless
+    eartag
+    parabolic
 
     # PDF Viewer
     kdePackages.okular
@@ -52,6 +54,10 @@
     # sound management
     pwvucontrol
     helvum
+
+    distroshelf
+
+    citations
   ];
 
 }
