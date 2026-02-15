@@ -37,6 +37,10 @@ in
         };
       };
 
+      dwindle = {
+        force_split = 2;
+      };
+
       animations = {
         enabled = "yes, please :)";
       };
