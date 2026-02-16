@@ -19,6 +19,8 @@
     qalculate-gtk
 
     bitwarden-desktop
+
+    neovide
   ];
 
   hardware.opentabletdriver = {
@@ -29,5 +31,7 @@
   programs.firefox = {
     enable = true;
   };
+
+  services.flatpak.enable = true;
 
 }

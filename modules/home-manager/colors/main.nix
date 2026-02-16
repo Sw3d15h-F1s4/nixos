@@ -24,44 +24,44 @@ in
     };
 
 
-    bg_dim = mkColor;
-    bg0 = mkColor;
-    bg1 = mkColor;
-    bg2 = mkColor;
-    bg3 = mkColor;
-    bg4 = mkColor;
-    bg5 = mkColor;
-    bg_red = mkColor;
-    bg_green = mkColor;
-    bg_blue = mkColor;
+    bg_dim    = mkColor;
+    bg0       = mkColor;
+    bg1       = mkColor;
+    bg2       = mkColor;
+    bg3       = mkColor;
+    bg4       = mkColor;
+    bg5       = mkColor;
+    bg_red    = mkColor;
+    bg_green  = mkColor;
+    bg_blue   = mkColor;
     bg_yellow = mkColor;
     bg_purple = mkColor;
-    text = mkColor;
+    text      = mkColor;
 
-    red = mkColor;
-    orange = mkColor;
-    yellow = mkColor;
-    green = mkColor;
-    cyan = mkColor;
-    blue = mkColor;
-    purple = mkColor;
+    red       = mkColor;
+    orange    = mkColor;
+    yellow    = mkColor;
+    green     = mkColor;
+    cyan      = mkColor;
+    blue      = mkColor;
+    purple    = mkColor;
 
-    br_red = mkColor;
+    br_red    = mkColor;
     br_orange = mkColor;
     br_yellow = mkColor;
-    br_green = mkColor;
-    br_cyan = mkColor;
-    br_blue = mkColor;
+    br_green  = mkColor;
+    br_cyan   = mkColor;
+    br_blue   = mkColor;
     br_purple = mkColor;
 
-    white = mkColor;
-    br_white = mkColor;
+    white     = mkColor;
+    br_white  = mkColor;
 
-    darkgray = mkColor;
+    darkgray  = mkColor;
     lightgray = mkColor;
-    gray = mkColor;
-    black = mkColor;
-    brblack = mkColor;
+    gray      = mkColor;
+    black     = mkColor;
+    brblack   = mkColor;
   };
 
 }

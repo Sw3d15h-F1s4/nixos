@@ -56,8 +56,6 @@
     helvum
 
     distroshelf
-
-    citations
   ];
 
 }

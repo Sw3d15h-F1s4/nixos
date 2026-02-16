@@ -11,6 +11,7 @@ in
     tectonic
     qucs-s
     ngspice
+    citations
 
     (octaveFull.withPackages (ps: with ps; [
       symbolic

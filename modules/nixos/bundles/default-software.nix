@@ -3,7 +3,6 @@
 
   environment.systemPackages = with pkgs; [
     # Process/system monitors
-    gtop
     htop
 
     # CLI tools for Neovim
@@ -11,7 +10,6 @@
     fd
     ripgrep
     clang
-    neovide
 
     # Git
     git
@@ -45,9 +43,6 @@
     enable = true;
   };
 
-  programs.fish.enable = true;
-
-
   myNixOS = {
     fish.enable = true;
   };
@@ -56,7 +51,5 @@
     enable = true;
     binfmt = true;
   };
-
-  services.flatpak.enable = true;
 
 }
