@@ -8,7 +8,7 @@
 
     (lutris.override {
       extraPkgs = p: [
-        p.wineWowPackages.full
+        p.wineWow64Packages.full
         p.winetricks
       ];
     })
