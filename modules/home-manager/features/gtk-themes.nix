@@ -41,4 +41,11 @@ in
     gtk2.force = true;
   };
 
+  qt = {
+    enable = true;
+    style.name = "breeze";
+    platformTheme.name = "qtct";
+
+  };
+
 }
