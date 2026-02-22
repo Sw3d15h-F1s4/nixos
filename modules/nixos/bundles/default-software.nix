@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 
   environment.systemPackages = with pkgs; [
@@ -6,10 +6,10 @@
     htop
 
     # CLI tools for Neovim
-    fzf
-    fd
-    ripgrep
-    clang
+    # fzf
+    # fd
+    # ripgrep
+    # clang
 
     # Git
     git
@@ -26,14 +26,17 @@
 
     # nice to have a scripting language
     python312
+
+    inputs.nvf.packages.x86_64-linux.default
+    nano
   ];
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-  };
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  #   viAlias = true;
+  #   vimAlias = true;
+  # };
 
   programs.lazygit = {
     enable = true;

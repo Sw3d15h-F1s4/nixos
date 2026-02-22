@@ -12,7 +12,6 @@
     bundles.hyprland.enable = true;
 
     ghostty.enable = true;
-    nixvim.enable = true;
     neovide.enable = true;
     fastfetch.enable = true;
     zellij.enable = true;

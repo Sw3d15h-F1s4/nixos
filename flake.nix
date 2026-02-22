@@ -19,9 +19,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Manages neovim through home-manager modules
-    nixvim = {
-      url = "github:nix-community/nixvim";
+    # My Neovim config (managed externally)
+    nvf = {
+      url = "github:Sw3d15h-F1s4/nvf-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

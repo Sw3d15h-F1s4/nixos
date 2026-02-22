@@ -7,15 +7,6 @@
     };
   };
 
-  programs.nixvim = {
-    extraConfigLuaPost = ''
-      if vim.g.neovide then
-        vim.g.everforest_transparent_background = 0
-        vim.cmd("colorscheme everforest")
-      end
-    '';
-  };
-
   wayland.windowManager.hyprland.settings = {
     windowrule = [
       "match:class neovide, opacity 0.8"
