@@ -10,8 +10,8 @@ I might forget to update this.
  - Bar: Waybar
  - Launcher: Rofi (Wayland)
  - Greeter: SDDM
- - Terminal: Alacritty
- - Editor: neovim
+ - Terminal: Ghostty
+ - Editor: neovim [(config) here](https://github.com/Sw3d15h-F1s4/nvf-config)
  - Colorscheme: Everforest
 
 

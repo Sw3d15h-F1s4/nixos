@@ -342,3 +342,14 @@ software dead simple: add a line/file, rebuild, forget about it. If you want to 
 useful skill to develop (for me as well!). It's something I like about NixOS; the less I have to read `apt list --installed | grep manual` the better.
 
 
+# The switch to NVF
+I decided to switch to NVF since it's the new flashy thing, and it was time to rewrite my neovim config anyway. Lol. I was kind of dreading writing
+my NixVim config, as it was a bit of a nightmare to get right in the first place. Also I didn't really find NixVim's way of configuring plugins to 
+be all that great, and I kinda wanted lazy loading. Now, NVF has great lazy loading support, decent OOTB configurations, and is logically organized.
+It is very conducive to splitting your config into multiple files. I'm a fan, at least. 
+
+Also, I decided to make my neovim configuration entirely standalone from my nixos config. So I'll have to set my theme in two places, who cares. No 
+way in hell was I going to try to get my hacky nix color thing to generate nvim highlight groups. This way, I can test/edit/hack on my nvim config
+in a different repo and not worry about rebuilding my system config from scratch every time. Maybe I'll add it as a git submodule?
+
+edit: oh hell no. do not use flakes as a submodule. what the fuck. who thought "nixos-rebuild switch .?submodules=1#" was good syntax?? the fuck?
