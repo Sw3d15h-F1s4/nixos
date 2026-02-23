@@ -1,6 +1,9 @@
 My Nix Config
 =============
 
+Now hosted on [Codeberg!](https://codeberg.org/Sw3d15h-F1s4/nixos)
+
+
 Nix is my first time using Linux. I started around Feb 2024.
 
 # Info

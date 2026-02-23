@@ -136,15 +136,15 @@
       "locked": {
         "lastModified": 1771739602,
         "narHash": "sha256-ycJS5r6j6011/7twcQdOFtyOkaRnB71ek20z9lZkEY8=",
-        "owner": "Sw3d15h-F1s4",
-        "repo": "nvf-config",
+        "ref": "refs/heads/main",
         "rev": "6411c823d7a88c2da980be43250f68b618222005",
-        "type": "github"
+        "revCount": 3,
+        "type": "git",
+        "url": "https://codeberg.org/Sw3d15h-F1s4/nvf-config"
       },
       "original": {
-        "owner": "Sw3d15h-F1s4",
-        "repo": "nvf-config",
-        "type": "github"
+        "type": "git",
+        "url": "https://codeberg.org/Sw3d15h-F1s4/nvf-config"
       }
     },
     "nvf_2": {

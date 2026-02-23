@@ -21,7 +21,7 @@
 
     # My Neovim config (managed externally)
     nvf = {
-      url = "github:Sw3d15h-F1s4/nvf-config";
+      url = "git+https://codeberg.org/Sw3d15h-F1s4/nvf-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
